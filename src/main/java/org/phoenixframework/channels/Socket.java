@@ -315,12 +315,7 @@ public class Socket {
      */
     public void remove(final Channel channel) {
         synchronized (channels) {
-            for (final Iterator chanIter = channels.iterator(); chanIter.hasNext(); ) {
-                if (chanIter.next() == channel) {
-                    chanIter.remove();
-                    break;
-                }
-            }
+            channels.remove(channel);
         }
     }
 
